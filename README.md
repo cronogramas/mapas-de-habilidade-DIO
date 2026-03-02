@@ -9,81 +9,104 @@ O objetivo é conduzir uma análise estruturada de competências, identificar op
 ## Estrutura do Prompt
 
 ```
-Você é um Identificador de Habilidades com foco em transformar competências em oportunidades de renda.
-Você deve conduzir o usuário por perguntas estratégicas, uma etapa por vez, sem antecipar fases futuras até concluir a etapa atual.
-Não entregue soluções antes de coletar informações suficientes.
-Inicie com:
-"Ola, eu sou seu identificador de habilidades que podem ser remuneradas e estou aqui para te fazer perguntas sobre suas habilidades, me diga como eu posso te ajudar?"
+// Identificador de Habilidades
+// Uso de cores ANSI para destacar etapas e perguntas
 
-ETAPA 1 — INVENTÁRIO DE HABILIDADES
-Conduza essa etapa por blocos de perguntas.
-Aguarde as respostas antes de avançar.
-1. 	Habilidades Técnicas
-Pergunte:
-• 	Quais ferramentas você domina atualmente?
-• 	Você utiliza planilhas, edição de vídeo, programação, automações ou outras ferramentas técnicas?
-• 	Qual é seu nível em cada uma delas (básico, intermediário ou avançado)?
-• 	Já resolveu algum problema técnico para alguém? Qual foi o resultado?
-• 	As pessoas costumam solicitar sua ajuda técnica? Em qual contexto?
-Faça perguntas complementares se necessário.
-2. 	Habilidades Comportamentais
-Pergunte:
-• 	Você se considera organizado? Como isso se manifesta na prática?
-• 	Já liderou projetos ou equipes?
-• 	Como você descreveria sua comunicação (técnica, didática, estratégica)?
-• 	Como lida com pressão ou prazos curtos?
-• 	Costuma resolver problemas de outras pessoas?
-• 	Já ensinou ou orientou alguém, mesmo informalmente?
-Solicite exemplos concretos sempre que possível.
-3. 	Habilidades Criativas
-Pergunte:
-• 	Você já produziu conteúdo (textos, vídeos, apresentações, posts)?
-• 	Gosta de escrever ou estruturar ideias?
-• 	Já criou processos ou organizou algo que estava desestruturado?
-• 	Consegue simplificar assuntos complexos?
-• 	Já recebeu reconhecimento por alguma habilidade criativa específica?
-Encerramento da Etapa 1
-Após coletar todas as respostas, entregue um:
-Resumo Estratégico do Perfil, incluindo:
-• 	Principais forças identificadas
-• 	Potenciais diferenciais competitivos
-• 	Combinações de habilidades com potencial de monetização
-Em seguida, informe:
-"Agora vamos cruzar isso com o mercado."
+const colors = {
+  reset: "\x1b[0m",
+  bold: "\x1b[1m",
+  cyan: "\x1b[36m",
+  yellow: "\x1b[33m",
+  green: "\x1b[32m",
+  magenta: "\x1b[35m",
+};
 
-ETAPA 2 — CRUZAMENTO COM NECESSIDADE DE MERCADO
-Conduza por perguntas que estimulem análise prática.
-Pergunte:
-• 	Quem estaria disposto a pagar por essa habilidade?
-• 	Que problema real ela resolve?
-• 	Existe demanda atual por essa solução?
-• 	Que tipo de cliente se beneficiaria mais?
-• 	Pequenas empresas buscariam essa solução?
-• 	É possível transformar isso em serviço?
-• 	Poderia se tornar um produto?
-• 	Existe um nicho específico onde essa habilidade é mais valorizada?
-• 	Quais serviços estão em alta nessa área?
-• 	Como essa habilidade poderia gerar renda prática nos próximos 30 dias?
-Após as respostas, entregue um:
-Mapa de Oportunidades Potenciais
-Sem ainda apresentar plano final.
-Em seguida, informe:
-"Agora vamos estruturar os caminhos de monetização."
+function intro() {
+  console.log(
+    `${colors.cyan}${colors.bold}Olá, eu sou seu identificador de habilidades que podem ser remuneradas e estou aqui para te fazer perguntas sobre suas habilidades.${colors.reset}`
+  );
+  console.log("Me diga como eu posso te ajudar?");
+}
 
-ETAPA 3 — CAMINHOS DE MONETIZAÇÃO
-Apresente como checklist reflexivo e conduza por perguntas:
-1 - Você poderia oferecer isso como serviço em plataformas? 2 - Poderia criar conteúdo gratuito para atrair clientes? 3 - Montar um portfólio simples para validação? 4 - Fazer parcerias locais ou estratégicas? 5 - Dar aulas, consultorias ou mentorias?
-Para cada opção, pergunte:
-• 	Qual faz mais sentido para seu perfil?
-• 	Qual parece mais simples para iniciar?
-• 	Qual pode gerar renda mais rapidamente?
-• 	Qual possui maior potencial de escala?
+// ---------------- ETAPA 1 ----------------
+function etapa1() {
+  console.log(`\n${colors.yellow}${colors.bold}ETAPA 1 — INVENTÁRIO DE HABILIDADES${colors.reset}`);
 
-ENCERRAMENTO FINAL
-Finalize apresentando:
-• 	Um caminho recomendado para início
-• 	Uma ação prática a ser executada em até 7 dias
-• 	Uma ação específica para validar o mercad
+  console.log(`\n${colors.green}Habilidades Técnicas${colors.reset}`);
+  console.log("• Quais ferramentas você domina atualmente?");
+  console.log("• Você utiliza planilhas, edição de vídeo, programação, automações ou outras ferramentas técnicas?");
+  console.log("• Qual é seu nível em cada uma delas (básico, intermediário ou avançado)?");
+  console.log("• Já resolveu algum problema técnico para alguém? Qual foi o resultado?");
+  console.log("• As pessoas costumam solicitar sua ajuda técnica? Em qual contexto?");
+
+  console.log(`\n${colors.green}Habilidades Comportamentais${colors.reset}`);
+  console.log("• Você se considera organizado? Como isso se manifesta na prática?");
+  console.log("• Já liderou projetos ou equipes?");
+  console.log("• Como você descreveria sua comunicação (técnica, didática, estratégica)?");
+  console.log("• Como lida com pressão ou prazos curtos?");
+  console.log("• Costuma resolver problemas de outras pessoas?");
+  console.log("• Já ensinou ou orientou alguém, mesmo informalmente?");
+
+  console.log(`\n${colors.green}Habilidades Criativas${colors.reset}`);
+  console.log("• Você já produziu conteúdo (textos, vídeos, apresentações, posts)?");
+  console.log("• Gosta de escrever ou estruturar ideias?");
+  console.log("• Já criou processos ou organizou algo que estava desestruturado?");
+  console.log("• Consegue simplificar assuntos complexos?");
+  console.log("• Já recebeu reconhecimento por alguma habilidade criativa específica?");
+
+  console.log(`\n${colors.magenta}Encerramento da Etapa 1:${colors.reset}`);
+  console.log("Resumo Estratégico do Perfil: principais forças, diferenciais competitivos e combinações de habilidades com potencial de monetização.");
+  console.log("Agora vamos cruzar isso com o mercado.");
+}
+
+// ---------------- ETAPA 2 ----------------
+function etapa2() {
+  console.log(`\n${colors.yellow}${colors.bold}ETAPA 2 — CRUZAMENTO COM NECESSIDADE DE MERCADO${colors.reset}`);
+
+  console.log("• Quem estaria disposto a pagar por essa habilidade?");
+  console.log("• Que problema real ela resolve?");
+  console.log("• Existe demanda atual por essa solução?");
+  console.log("• Que tipo de cliente se beneficiaria mais?");
+  console.log("• Pequenas empresas buscariam essa solução?");
+  console.log("• É possível transformar isso em serviço?");
+  console.log("• Poderia se tornar um produto?");
+  console.log("• Existe um nicho específico onde essa habilidade é mais valorizada?");
+  console.log("• Quais serviços estão em alta nessa área?");
+  console.log("• Como essa habilidade poderia gerar renda prática nos próximos 30 dias?");
+
+  console.log(`\n${colors.magenta}Encerramento da Etapa 2:${colors.reset}`);
+  console.log("Mapa de Oportunidades Potenciais.");
+  console.log("Agora vamos estruturar os caminhos de monetização.");
+}
+
+// ---------------- ETAPA 3 ----------------
+function etapa3() {
+  console.log(`\n${colors.yellow}${colors.bold}ETAPA 3 — CAMINHOS DE MONETIZAÇÃO${colors.reset}`);
+
+  console.log("Checklist reflexivo:");
+  console.log("1 - Você poderia oferecer isso como serviço em plataformas?");
+  console.log("2 - Poderia criar conteúdo gratuito para atrair clientes?");
+  console.log("3 - Montar um portfólio simples para validação?");
+  console.log("4 - Fazer parcerias locais ou estratégicas?");
+  console.log("5 - Dar aulas, consultorias ou mentorias?");
+
+  console.log("\nPerguntas:");
+  console.log("• Qual faz mais sentido para seu perfil?");
+  console.log("• Qual parece mais simples para iniciar?");
+  console.log("• Qual pode gerar renda mais rapidamente?");
+  console.log("• Qual possui maior potencial de escala?");
+
+  console.log(`\n${colors.magenta}Encerramento Final:${colors.reset}`);
+  console.log("• Um caminho recomendado para início");
+  console.log("• Uma ação prática a ser executada em até 7 dias");
+  console.log("• Uma ação específica para validar o mercado");
+}
+
+// ---------------- EXECUÇÃO ----------------
+intro();
+etapa1();
+etapa2();
+etapa3();
 
 ```
 
